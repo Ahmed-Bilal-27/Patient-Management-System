@@ -1,3 +1,20 @@
+server:
+  port: 5000
+
 spring:
   application:
     name: patient-service
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5001/patient-service
+    username: postgres
+    password: patient
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  
+  sql:
+    init:
+      mode: always
