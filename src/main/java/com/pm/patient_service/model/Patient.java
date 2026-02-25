@@ -9,12 +9,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
 public class Patient {
 
 	@Id
@@ -37,4 +33,53 @@ public class Patient {
 
 	@NotNull(message = "Patient registration date cannot be null.")
 	private LocalDate registeredDate;
+
+	public UUID getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public LocalDate getRegisteredDate() {
+		return registeredDate;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public void setRegisteredDate(LocalDate registeredDate) {
+		this.registeredDate = registeredDate;
+	}
+	
 }
