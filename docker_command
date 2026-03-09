@@ -1,0 +1,9 @@
+docker run --name patient-service \
+  --env SPRING_DATASOURCE_URL=jdbc:postgresql://patient_db:5432/patients_db \
+  --env SPRING_DATASOURCE_USERNAME=admin \
+  --env SPRING_DATASOURCE_PASSWORD=patient \
+  --env SPRING_JPA_HIBERNATE_DDL_AUTO=update \
+  --env SPRING_SQL_INIT_MODE=always \
+  --publish 5000:5000 \
+  --network patient-network \
+  --detach patient-service:latest
