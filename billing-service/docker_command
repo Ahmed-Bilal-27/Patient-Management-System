@@ -1,0 +1,5 @@
+docker run --name billing-service \
+  --publish 6000:6000 \
+  --publish 6001:6001 \
+  --network patient-network \
+  --detach billing-service:v1
