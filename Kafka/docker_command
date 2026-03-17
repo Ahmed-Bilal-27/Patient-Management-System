@@ -1,0 +1,12 @@
+docker run --name kafka \
+  --env KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094 \
+  --env KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER \
+  --env KAFKA_CONTROLLER_QUORUM_VOTERS=0@kafka:9093 \
+  --env KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT \
+  --env KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094 \
+  --env KAFKA_NODE_ID=0 \
+  --env KAFKA_PROCESS_ROLES=controller,broker \
+  --publish 9092:9092 \
+  --publish 9094:9094 \
+  --network patient-network \
+  --detach apache/kafka:latest
