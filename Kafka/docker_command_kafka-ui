@@ -1,0 +1,6 @@
+docker run -d --name kafka-ui \
+  --network patient-network \
+  -p 8090:8080 \
+  -e KAFKA_CLUSTERS_0_NAME=local \
+  -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 \
+  provectuslabs/kafka-ui:latest
