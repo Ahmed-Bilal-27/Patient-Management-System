@@ -165,6 +165,13 @@
 			<version>3.1.0.RELEASE</version>
 		</dependency>
 
+		<!-- Kafka -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>4.0.3</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
