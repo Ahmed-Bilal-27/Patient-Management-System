@@ -1,0 +1,379 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Ahmed Bilal
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: patient
+      changes:
+        - createTable:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date_of_birth
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: registered_date
+                  type: date
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: Ahmed Bilal
+      changes:
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "123e4567-e89b-12d3-a456-426614174000"
+              - column:
+                  name: name
+                  value: "Ali Khattak"
+              - column:
+                  name: email
+                  value: "k.ali@gmail.com"
+              - column:
+                  name: address
+                  value: "Kohat"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1985-06-15"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-01-10"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "123e4567-e89b-12d3-a456-426614174001"
+              - column:
+                  name: name
+                  value: "Jane Smith"
+              - column:
+                  name: email
+                  value: "jane.smith@example.com"
+              - column:
+                  name: address
+                  value: "456 Elm St, Shelbyville"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1990-09-23"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-12-01"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "123e4567-e89b-12d3-a456-426614174002"
+              - column:
+                  name: name
+                  value: "Alice Johnson"
+              - column:
+                  name: email
+                  value: "alice.johnson@example.com"
+              - column:
+                  name: address
+                  value: "789 Oak St, Capital City"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1978-03-12"
+              - column:
+                  name: registered_date
+                  valueDate: "2022-06-20"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "123e4567-e89b-12d3-a456-426614174003"
+              - column:
+                  name: name
+                  value: "Abu Bakar"
+              - column:
+                  name: email
+                  value: "a.bakar@hotmail.com"
+              - column:
+                  name: address
+                  value: "Faisalabad"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1982-11-30"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-05-14"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "123e4567-e89b-12d3-a456-426614174004"
+              - column:
+                  name: name
+                  value: "Emily Davis"
+              - column:
+                  name: email
+                  value: "emily.davis@example.com"
+              - column:
+                  name: address
+                  value: "654 Maple St, Shelbyville"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1995-02-05"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-03-01"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174005"
+              - column:
+                  name: name
+                  value: "Michael Green"
+              - column:
+                  name: email
+                  value: "michael.green@example.com"
+              - column:
+                  name: address
+                  value: "987 Cedar St, Springfield"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1988-07-25"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-02-15"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174006"
+              - column:
+                  name: name
+                  value: "Sarah Taylor"
+              - column:
+                  name: email
+                  value: "sarah.taylor@example.com"
+              - column:
+                  name: address
+                  value: "123 Birch St, Shelbyville"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1992-04-18"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-08-25"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174007"
+              - column:
+                  name: name
+                  value: "Safdar Khan"
+              - column:
+                  name: email
+                  value: "k.safdar@ciitwah.edu.pk"
+              - column:
+                  name: address
+                  value: "Hyderabad"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1975-01-11"
+              - column:
+                  name: registered_date
+                  valueDate: "2022-10-10"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174008"
+              - column:
+                  name: name
+                  value: "Laura White"
+              - column:
+                  name: email
+                  value: "laura.white@example.com"
+              - column:
+                  name: address
+                  value: "789 Palm St, Springfield"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1989-09-02"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-04-20"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174009"
+              - column:
+                  name: name
+                  value: "James Harris"
+              - column:
+                  name: email
+                  value: "james.harris@example.com"
+              - column:
+                  name: address
+                  value: "321 Cherry St, Shelbyville"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1993-11-15"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-06-30"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174010"
+              - column:
+                  name: name
+                  value: "Emma Moore"
+              - column:
+                  name: email
+                  value: "emma.moore@example.com"
+              - column:
+                  name: address
+                  value: "654 Spruce St, Capital City"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1980-08-09"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-01-22"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174011"
+              - column:
+                  name: name
+                  value: "Ethan Martinez"
+              - column:
+                  name: email
+                  value: "ethan.martinez@example.com"
+              - column:
+                  name: address
+                  value: "987 Redwood St, Springfield"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1984-05-03"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-05-12"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174012"
+              - column:
+                  name: name
+                  value: "Sophia Clark"
+              - column:
+                  name: email
+                  value: "sophia.clark@example.com"
+              - column:
+                  name: address
+                  value: "123 Hickory St, Shelbyville"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1991-12-25"
+              - column:
+                  name: registered_date
+                  valueDate: "2022-11-11"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174013"
+              - column:
+                  name: name
+                  value: "Daniel Lewis"
+              - column:
+                  name: email
+                  value: "daniel.lewis@example.com"
+              - column:
+                  name: address
+                  value: "456 Cypress St, Capital City"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1976-06-08"
+              - column:
+                  name: registered_date
+                  valueDate: "2023-09-19"
+
+        - insert:
+            tableName: patient
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174014"
+              - column:
+                  name: name
+                  value: "Isabella Walker"
+              - column:
+                  name: email
+                  value: "isabella.walker@example.com"
+              - column:
+                  name: address
+                  value: "789 Willow St, Springfield"
+              - column:
+                  name: date_of_birth
+                  valueDate: "1987-10-17"
+              - column:
+                  name: registered_date
+                  valueDate: "2024-03-29"

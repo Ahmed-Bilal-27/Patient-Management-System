@@ -90,18 +90,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Flyway Dependencies 
+		<!-- Liquibase -->
 		<dependency>
-	      <groupId>org.springframework.boot</groupId>
-	      <artifactId>spring-boot-starter-flyway</artifactId>
-	    </dependency>
-	
-	    <dependency>
-	      <groupId>org.springframework.boot</groupId>
-	      <artifactId>spring-boot-starter-flyway-test</artifactId>
-	      <scope>test</scope>
-	    </dependency>
-	    -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-liquibase</artifactId>
+		</dependency>
 
 		<!-- Lombok -->
 		<dependency>
