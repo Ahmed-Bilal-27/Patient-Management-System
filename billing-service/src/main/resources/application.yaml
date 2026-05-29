@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: billing-service
+
+server:
+  port: 6000
+
+grpc:
+  server:
+    port: 6001
