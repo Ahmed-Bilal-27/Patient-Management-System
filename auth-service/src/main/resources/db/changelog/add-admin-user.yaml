@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Ahmed Bilal
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: "223e4567-e89b-12d3-a456-426614174006"
+              - column:
+                  name: email
+                  value: "ahmedbilal@gmail.com"
+              - column:
+                  name: password
+                  value: "$2b$12$7hoRZfJrRKD2nIm2vHLs7OBETy.LWenXXMLKf99W8M4PUwO6KB7fu"
+              - column:
+                  name: role
+                  value: "ADMIN"
