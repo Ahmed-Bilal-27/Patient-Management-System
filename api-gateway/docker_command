@@ -1,4 +1,0 @@
-docker run --name api-gateway \
-  --publish 4000:8080 \
-  --network patient-network \
-  --detach api-gateway:v1
