@@ -21,6 +21,7 @@ spring:
                 - Path=/api/patients
               filters:
                 - SetPath=/patients
+                - JwtValidation
 
             - id: api-docs-patient-route
               uri: http://patient-service:5000
